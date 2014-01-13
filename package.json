@@ -1,7 +1,7 @@
 {
   "name": "tern-jquery-api-doc",
   "description": "Tern plugin for generating jQuery API docs on the fly and associating them with the correct objects in Tern",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "Quinn Slack",
     "email": "sqs@sourcegraph.com"
