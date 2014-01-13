@@ -33,12 +33,13 @@ Run `npm install` to fetch the dependencies. You must also have `xsltproc' insta
 
 ### Configure for use with tern
 
-The plugin requires 3 paths to be specified as configuration options in your `.tern-project` file:
+The plugin has the following configuration options (to be specified in your `.tern-project` file):
 
 * `apiDocDir`: the directory containing the [api.jquery.com](https://github.com/jquery/api.jquery.com) git repository.
 * `apiSrcDir`: the path to the `src/` directory in the [jQuery git repository](https://github.com/jquery/jquery).
 * `xslFile`: the path to the XSL stylesheet used to perform the XSLT transformation of the XML documentation. Typically this points to the (entries2html.xsl)[https://github.com/jquery/api.jquery.com/blob/master/entries2html.xsl] file in the api.jquery.com git repository.
 * `xsltproc`: the path to the `xsltproc` program. If not specified, it looks in the current `$PATH`.
+* `html`: if true, attach the whole HTML documentation; if false or unspecified, only attach the short description.
 
 The easiest way to satisfy these requirements is to clone the [github.com/jquery/jquery](https://github.com/jquery/jquery) and [github.com/jquery/api.jquery.com](https://github.com/jquery/api.jquery.com) repositories. If you cloned them to `/home/alice/jquery` and `/home/alice/api.jquery.com`, then you would use the following configuration:
 

@@ -201,7 +201,7 @@ tern.registerPlugin('jquery-api-doc', function(server, options) {
             console.error("No jQuery definition found at path " + JSON.stringify(e._path));
             return;
           }
-          obj.doc = e.parsed.desc;
+          obj.doc = options.html ? e.html : e.parsed.desc;
         });
       },
     },
