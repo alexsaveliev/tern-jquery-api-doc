@@ -58,12 +58,7 @@ describe('tern condense output', function() {
         if (stderr) console.error(stderr);
         assert.ifError(err);
         var got = JSON.parse(stdout);
-//        console.log(JSON.stringify(got, null, 2));
-        require('should');
-        got.should.eql(want);
-// REALLY should be:        assert.equal(got['!define']['!requirejs']['src/core'].fn.removeAttr['!doc'], want['!define']['!requirejs']['src/core'].fn.removeAttr['!doc']);
-//        assert.equal(got['!define']['!requirejs']['src/core'].removeAttr['!doc'], want['!define']['!requirejs']['src/core'].removeAttr['!doc']);
-        // assert.equal(got['!define']['!requirejs']['src/core'].fn.constructor['!doc'], want['!define']['!requirejs']['src/core'].fn.constructor['!doc']);
+        // console.log(JSON.stringify(got, null, 2));
         assert.deepEqual(got, want);
         done();
       });
