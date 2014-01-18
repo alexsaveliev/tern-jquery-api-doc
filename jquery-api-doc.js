@@ -182,7 +182,7 @@ tern.registerPlugin('jquery-api-doc', function(server, options) {
             // $.ajax(...))?
             var isJQueryFnMethod = p.name.indexOf('jQuery.') == -1;
             if (isJQueryFnMethod) e._path = 'fn.' + p.name;
-            else e._path = p.name;
+            else e._path = p.name.replace(/^jQuery\./, '');
           }
         });
 
