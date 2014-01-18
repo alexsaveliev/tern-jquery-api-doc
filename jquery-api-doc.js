@@ -11,6 +11,7 @@ exports.generateDoc = function(xmlDocFile, xslFile, xsltproc, cb) {
   // parsing the XML to JSON, and running the XML through an XSL stylesheet.
   // Both outputs are useful: the JSON gets us programmatically accessible
   // metadata, and the XSL stylesheet lets us present the docs visually.
+  console.error('generateDoc', xmlDocFile);
   var docObj = exports.parseDocXMLSync(xmlDocFile);
   exports.generateDocHTML(xmlDocFile, xslFile, xsltproc, function(err, html) {
     cb(err, {html: html, parsed: docObj});
