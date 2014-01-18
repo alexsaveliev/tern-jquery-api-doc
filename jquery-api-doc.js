@@ -190,6 +190,7 @@ tern.registerPlugin('jquery-api-doc', function(server, options) {
           if (!e._path) return;
 
           // Get the property denoted by the key path.
+          // TODO(sqs): special-case "ajax", whose origin is src/ajax.js
           var parts = e._path.split('.');
           var obj = jQueryModule.getProp(parts[0]).getType();
           if (!obj) {
