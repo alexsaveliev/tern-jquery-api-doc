@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "tern": "git://github.com/sqs/tern.git#jquery",
-    "xml2js": "~0.4.1",
+    "xml2js": "~0.4.11",
     "async": "~0.2.9"
   },
   "devDependencies": {
